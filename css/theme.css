@@ -72,11 +72,11 @@
 
   background: linear-gradient(
     to right,
-    #fff,
+    #2bfe1f,
     #c3aaf5,
     #857ee5,
     #c3aaf5,
-    #fff
+    #2bfe1f
   );
   background-size: 1000%;
   background-clip: text;
@@ -105,7 +105,7 @@
    transform: translate(0%, 20%) rotate(5deg);
 }
   
-.fancy:hover > .outer:nth-child(6) {
+.fancy:hover > .outer:nth-child(7) {
   transform: translate(0%, -20%) rotate(3deg);
 }
   
@@ -135,34 +135,6 @@
   
 .fancy:hover > .outer:nth-child(14) {
    transform: translate(0, -30%) rotate(-10deg);
-}
-
-.fancy:hover > .outer:nth-child(16) {
-  transform: translate(0%, -25%) rotate(5deg);
-}
- 
-.fancy:hover > .outer:nth-child(17) {
-  transform: translate(0%, 15%) rotate(10deg);
-}
- 
-.fancy:hover > .outer:nth-child(18) {
- transform: translate(0%, -40%) rotate(-8deg);
-}
- 
-.fancy:hover > .outer:nth-child(19) {
- transform: translate(0%, 15%) rotate(6deg);
-}
- 
-.fancy:hover > .outer:nth-child(20) {
- transform: translate(20%, 40%) rotate(-3deg);
-}
- 
-.fancy:hover > .outer:nth-child(21) {
- transform: translate(50%, 20%) rotate(2deg);
-}
- 
-.fancy:hover > .outer:nth-child(22) {
-  transform: translate(120%, -60%) rotate(-10deg);
 }
 
 /*Background video*/
@@ -463,13 +435,71 @@
   background-size: cover;
 }
 
-/*=============== filter  ===============*/
-.filter {
-  filter: grayscale(100%);
+/*=============== News  ===============*/
+
+.news-container {
+  position: relative;
+  top: 80px;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0px 8px 0px rgba(0, 0, 0, 0.3);
 }
-.hue-rot {
-  filter: hue-rotate(100deg);
+
+.news-container .title {
+  position: absolute;
+  background: #000;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  color: #2bfe1f;
+  font-weight: bold;
+  z-index: 200;
 }
+
+.news-container ul {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  animation: scroll 30s infinite linear;
+}
+
+.news-container ul li {
+  white-space: nowrap;
+  padding: 10px 24px;
+  color: #494949;
+  position: relative;
+}
+
+.news-container ul li::after {
+  content:"";
+  width: 1px;
+  height: 100%;
+  background: #b8b8b8;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.news-container ul li:last-child::after {
+  display: none;
+}
+
+@keyframes scroll {
+  from {
+      transform: translateX(100%);
+  }
+
+  to {
+      transform: translateX(-3500px);
+
+  }
+}
+
+
+
+
 
 
 @keyframes shape_1{
